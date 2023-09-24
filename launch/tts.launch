@@ -1,0 +1,6 @@
+<launch>
+
+    <include file="$(find sound_play)/soundplay_node.launch"/>
+    <node pkg="sound_control" type="tts_service.py" name="tts_service" output="screen"/>
+
+</launch>

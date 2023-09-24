@@ -1,0 +1,16 @@
+[Unit]
+Description=Sound control
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+#Restart=always
+#RestartSec=1
+#ExecStart=/usr/bin/sh -c 'minimodem -r 80 | /usr/bin/sound_control'
+User=n
+Group=n
+ExecStart=/usr/bin/sound_control.sh
+#ExecStart=/home/n/Repos/modem_commands/sound_control.sh
+
+[Install]
+WantedBy=multi-user.target
